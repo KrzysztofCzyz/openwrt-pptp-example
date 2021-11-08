@@ -17,5 +17,7 @@ Done :)
 
 ## Adding users
 
-Follow [the official guide](https://openwrt.org/docs/guide-user/services/vpn/pptp/server#vpn_service).
-
+A) Follow [the official guide](https://openwrt.org/docs/guide-user/services/vpn/pptp/server#vpn_service).
+B) Use add_user script provided in scripts/ directory
+- Run ```scp scripts/* root@${ROUTER_IP}:/root```
+- Run ```ssh root@192.168.1.1 "/root/add_user.ash ${USERNAME} ${PASSWORD}" to add a user
