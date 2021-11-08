@@ -1,0 +1,24 @@
+
+config defaults
+	option syn_flood '1'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+
+config zone 'lan'
+	option name 'lan'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'ACCEPT'
+	option network 'lan repeater_bridge wwan'
+	option masq '1'
+	option mtu_fix '1'
+	list device 'ppp+'
+
+config rule 'pptp'
+	option name 'Allow-PPTP'
+	option src 'wwan'
+	option dest_port '1723'
+	option proto 'tcp'
+	option target 'ACCEPT'
+

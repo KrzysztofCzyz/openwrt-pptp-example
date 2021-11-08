@@ -1,0 +1,27 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option hwmode '11g'
+	option path 'platform/ar933x_wmac'
+	option htmode 'HT20'
+	option country '00'
+	option channel '1'
+	option disabled '0'
+
+config wifi-iface 'myap'
+	option device 'radio0'
+	option mode 'ap'
+	option encryption 'psk2'
+	option key 'Haslo1@3'
+	option ssid 'OpenWrt'
+	option network 'lan'
+
+config wifi-iface 'wifi_local'
+	option network 'wwan'
+	option ssid '${SSID}'
+	option encryption 'psk2'
+	option device 'radio0'
+	option mode 'sta'
+	option bssid '${BSSID}'
+	option key '${KEY}'
+
