@@ -15,7 +15,7 @@ This repo gives you almost everything you need to run a basic OpenWrt-based PPTP
 
 Done :)
 
-## Adding more users
+## Adding users
 
 Follow [the official guide](https://openwrt.org/docs/guide-user/services/vpn/pptp/server#vpn_service).
 
